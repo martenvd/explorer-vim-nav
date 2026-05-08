@@ -1,0 +1,77 @@
+{
+  "name": "explorer-vim-nav",
+  "displayName": "Explorer Vim Navigation",
+  "description": "Toggle between editor and explorer with a keybinding, and navigate the explorer with vim motions (hjkl)",
+  "version": "0.0.1",
+  "publisher": "martenvd",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "explorerVimNav.toggleFocus",
+        "title": "Explorer Vim: Toggle Focus"
+      },
+      {
+        "command": "explorerVimNav.noop",
+        "title": "Explorer Vim: Noop"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "explorerVimNav.toggleFocus",
+        "key": "ctrl+;",
+        "mac": "cmd+;"
+      },
+      { "command": "explorerVimNav.escape", "key": "escape", "when": "explorerViewletFocus && !inputFocus" },
+      { "command": "explorerVimNav.moveDown", "key": "j", "when": "explorerViewletFocus && !inputFocus" },
+      { "command": "explorerVimNav.moveUp", "key": "k", "when": "explorerViewletFocus && !inputFocus" },
+      { "command": "explorerVimNav.collapse", "key": "h", "when": "explorerViewletFocus && !inputFocus" },
+      { "command": "explorerVimNav.expand", "key": "l", "when": "explorerViewletFocus && !inputFocus" },
+      { "command": "explorerVimNav.openItem", "key": "enter", "when": "explorerViewletFocus && !inputFocus" },
+      { "command": "explorerVimNav.goTop", "key": "g g", "when": "explorerViewletFocus && !inputFocus" },
+      { "command": "explorerVimNav.goBottom", "key": "shift+g", "when": "explorerViewletFocus && !inputFocus" },
+
+      { "command": "explorerVimNav.noop", "key": "a", "when": "explorerViewletFocus && !inputFocus" },
+      { "command": "explorerVimNav.noop", "key": "b", "when": "explorerViewletFocus && !inputFocus" },
+      { "command": "explorerVimNav.noop", "key": "c", "when": "explorerViewletFocus && !inputFocus" },
+      { "command": "explorerVimNav.noop", "key": "d", "when": "explorerViewletFocus && !inputFocus" },
+      { "command": "explorerVimNav.noop", "key": "e", "when": "explorerViewletFocus && !inputFocus" },
+      { "command": "explorerVimNav.noop", "key": "f", "when": "explorerViewletFocus && !inputFocus" },
+      { "command": "explorerVimNav.noop", "key": "g", "when": "explorerViewletFocus && !inputFocus" },
+      { "command": "explorerVimNav.noop", "key": "i", "when": "explorerViewletFocus && !inputFocus" },
+      { "command": "explorerVimNav.noop", "key": "m", "when": "explorerViewletFocus && !inputFocus" },
+      { "command": "explorerVimNav.noop", "key": "n", "when": "explorerViewletFocus && !inputFocus" },
+      { "command": "explorerVimNav.noop", "key": "o", "when": "explorerViewletFocus && !inputFocus" },
+      { "command": "explorerVimNav.noop", "key": "p", "when": "explorerViewletFocus && !inputFocus" },
+      { "command": "explorerVimNav.noop", "key": "q", "when": "explorerViewletFocus && !inputFocus" },
+      { "command": "explorerVimNav.noop", "key": "r", "when": "explorerViewletFocus && !inputFocus" },
+      { "command": "explorerVimNav.noop", "key": "s", "when": "explorerViewletFocus && !inputFocus" },
+      { "command": "explorerVimNav.noop", "key": "t", "when": "explorerViewletFocus && !inputFocus" },
+      { "command": "explorerVimNav.noop", "key": "u", "when": "explorerViewletFocus && !inputFocus" },
+      { "command": "explorerVimNav.noop", "key": "v", "when": "explorerViewletFocus && !inputFocus" },
+      { "command": "explorerVimNav.noop", "key": "w", "when": "explorerViewletFocus && !inputFocus" },
+      { "command": "explorerVimNav.noop", "key": "x", "when": "explorerViewletFocus && !inputFocus" },
+      { "command": "explorerVimNav.noop", "key": "y", "when": "explorerViewletFocus && !inputFocus" },
+      { "command": "explorerVimNav.noop", "key": "z", "when": "explorerViewletFocus && !inputFocus" },
+      { "command": "explorerVimNav.noop", "key": "space", "when": "explorerViewletFocus && !inputFocus" }
+    ]
+  },
+  "scripts": {
+    "build": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.2",
+    "@types/vscode": "^1.80.0",
+    "typescript": "^5.3.0"
+  }
+}
